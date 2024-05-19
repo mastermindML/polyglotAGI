@@ -5,6 +5,7 @@ from language_proficiency import understand_language_syntax
 from algorithm_generation import generate_algorithm
 from adaptation_merging import merge_languages
 from prompt_generation import generate_initial_prompt, refine_prompt
+from complex_solving import solve_complex_problem  # Import the new module
 
 def main():
     # Print Python path for debugging
