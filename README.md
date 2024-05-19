@@ -3,6 +3,16 @@ using polyglotAI with Profesor Codephreak enhanced by aGLM, <a href="https://git
 
 # PolyglotAI-AGI-DPT codephreak mastermind fusion Project
 
+polyglotAGI/
+├── knowledge_integration.py
+├── language_proficiency.py
+├── algorithm_generation.py
+├── adaptation_merging.py
+├── prompt_generation.py
+├── complex_solving.py
+└── main.py
+
+
 ## Overview
 The PolyglotAI-AGI-DPTfFusion project integrates real-time knowledge updates, language proficiency, efficient algorithm generation, dynamic adaptation and merging, adaptive reasoning, and recursive prompt generation. This project ensures continuous learning, adaptation, and improvement across various domains, leveraging advanced reasoning and dynamic prompt generation for comprehensive and innovative solutions.
 
