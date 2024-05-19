@@ -68,10 +68,11 @@ This file integrates all the modules and demonstrates the functionality of the e
 """
 
 # Write the README.md file
+```bash
 readme_path = '/mnt/data/README.md'
 with open(readme_path, 'w') as f:
     f.write(readme_content)
-
+```
 
 The PolyglotAI-AGI-DPT Fusion project integrates real-time knowledge updates, language proficiency, efficient algorithm generation, dynamic adaptation and merging, adaptive reasoning, and recursive prompt generation. This project ensures continuous learning, adaptation, and improvement across various domains, leveraging advanced reasoning and dynamic prompt generation for comprehensive and innovative solutions.
 Modules
