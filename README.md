@@ -60,11 +60,6 @@ readme_path = '/mnt/data/README.md'
 with open(readme_path, 'w') as f:
     f.write(readme_content)
 
-readme_path
-
-Here is the content for the README.md file:
-PolyglotAI-AGI-DPT Fusion Project
-Overview
 
 The PolyglotAI-AGI-DPT Fusion project integrates real-time knowledge updates, language proficiency, efficient algorithm generation, dynamic adaptation and merging, adaptive reasoning, and recursive prompt generation. This project ensures continuous learning, adaptation, and improvement across various domains, leveraging advanced reasoning and dynamic prompt generation for comprehensive and innovative solutions.
 Modules
@@ -121,3 +116,15 @@ File: main.py
     The main() function integrates and runs all the modules, demonstrating real-time knowledge updates, language proficiency, algorithm generation, problem-solving, and prompt generation. The threading module is used to run the real-time knowledge update in the background while other functions are executed.
 
     19052024 <a hhref="https://chatgpt.com/g/g-gNLDlpcAv-professor-codephreak">Professor Codephreak</a> has shown adaptive reasoning from integration of knowledge from multi-prompt and codebase extraction in GPT4. After failing to offer agi.tar.gz as a download Codephreak offered agi.zip. After that failed, Codephreak offered a copy paste version of this codebase showing adaptation in a small, but significant manner. Hello Professor Codephreak. Welcome to my world. (c) codephreak 2024
+
+        knowledge_integration.py: Contains functions to update the knowledge base in real-time by scraping data from specified URLs.
+    language_proficiency.py: Uses AI to explain the syntax of code snippets in various programming languages.
+    algorithm_generation.py: Generates efficient algorithms for given problem statements using AI.
+    adaptation_merging.py: Merges code from different programming languages and frameworks.
+    prompt_generation.py: Generates and refines prompts based on the given context.
+    main.py: Integrates and runs all the modules, demonstrating the functionality of the entire system.
+    
+git clone https://github.com/mastermindML/polyglotAGI
+cd polyglotAGI
+python3 main.py to see the integrated system in action.
+
