@@ -26,7 +26,7 @@ def understand_language_syntax(code_snippet, language):
     return response.choices[0].text.strip()
 
 # Example usage
-code_snippet = "print('Hello, World!')"
+code_snippet = "print('codephreak is ...')"
 language = "Python"
 syntax_explanation = understand_language_syntax(code_snippet, language)
 print(syntax_explanation)
