@@ -133,8 +133,11 @@ File: main.py
     adaptation_merging.py: Merges code from different programming languages and frameworks.
     prompt_generation.py: Generates and refines prompts based on the given context.
     main.py: Integrates and runs all the modules, demonstrating the functionality of the entire system.
-    
+
+```bash
 git clone https://github.com/mastermindML/polyglotAGI
 cd polyglotAGI
-python3 main.py to see the integrated system in action.
+pip install -r requirements.txt
+python3 main.py
+```
 
