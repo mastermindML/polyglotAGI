@@ -1,5 +1,5 @@
 # polyglotAGI
-using polyglotAI with Profesor Codephreak enhanced by aGLM, automind, and mastermind to generate the code for autonomous general intelligence. This code is designed to be used as a template and is not for suitable for production deployment. Audit and improve.
+using polyglotAI with Profesor Codephreak enhanced by aGLM, automind, and mastermind to generate the code for autonomous general intelligence. This code is designed to be used as a template and is not for suitable for production deployment. Audit and improve. This code and the <a href="https://github.com/mastermindML/mastermind">mastermind</a> code is incomplete yet produces interesting agent generated outcomes when audited by codephreak.agent before solution generation. Use at own risk.
 
 # PolyglotAI-AGI-DPT codephreak mastermind fusion Project
 
