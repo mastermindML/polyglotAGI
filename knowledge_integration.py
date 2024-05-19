@@ -1,6 +1,6 @@
 import requests
 import time
-from bs4 import BeautifulSoup4
+from bs4 import BeautifulSoup
 
 def update_knowledge_base(urls):
     """
