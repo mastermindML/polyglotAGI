@@ -3,6 +3,7 @@ using polyglotAI with Profesor Codephreak enhanced by aGLM, <a href="https://git
 
 # PolyglotAI-AGI-DPT codephreak mastermind fusion Project
 
+```csharp
 polyglotAGI/
 ├── knowledge_integration.py
 ├── language_proficiency.py
@@ -11,6 +12,7 @@ polyglotAGI/
 ├── prompt_generation.py
 ├── complex_solving.py
 └── main.py
+```
 
 
 ## Overview
