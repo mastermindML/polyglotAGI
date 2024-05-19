@@ -33,6 +33,6 @@ def real_time_update(interval, urls):
         time.sleep(interval)
 
 # Example usage
-urls = ['https://example.com/programming', 'https://example.com/frameworks']
+urls = ['https://github.com/pythaiml/automindx', 'https://github.com/mastermindML/mastermind']
 interval = 3600  # Update every hour
 real_time_update(interval, urls)
