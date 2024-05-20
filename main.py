@@ -25,7 +25,7 @@ def interactive_terminal():
             break
 
         response = openai.Completion.create(
-            engine="davinci-codex",
+            engine="gpt-3.5-turbo",
             prompt=user_input,
             max_tokens=150
         )
@@ -83,3 +83,4 @@ if __name__ == "__main__":
     os.makedirs("w3", exist_ok=True)
     
     main()
+
