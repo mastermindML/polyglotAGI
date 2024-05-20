@@ -1,5 +1,6 @@
 import requests
 import time
+import os
 from bs4 import BeautifulSoup
 
 def update_knowledge_base(urls):
@@ -16,7 +17,14 @@ def update_knowledge_base(urls):
     for url in urls:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
-        knowledge_base[url] = soup.get_text()
+        text = soup.get_text()
+        knowledge_base[url] = text
+
+        # Save the content to a file in the w3 folder
+        file_name = os.path.join("w3", url.replace("https://", "").replace("/", "_") + ".txt")
+        with open(file_name, "w", encoding="utf-8") as f:
+            f.write(text)
+
     return knowledge_base
 
 def real_time_update(interval, urls):
@@ -33,6 +41,6 @@ def real_time_update(interval, urls):
         time.sleep(interval)
 
 # Example usage
-urls = ['https://github.com/pythaiml/automindx', 'https://github.com/mastermindML/mastermind']
+urls = ['https://example.com/programming', 'https://example.com/frameworks']
 interval = 3600  # Update every hour
 real_time_update(interval, urls)
