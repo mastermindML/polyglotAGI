@@ -166,6 +166,6 @@ add your api key to .env
 alternative openai key addition
 export OPENAI_API_KEY='your-api-key'
 
-... not bad for a 6 hour codig session with Professor Codephreak. calling it a day, openai-python terminal session is not working. beautifulsoup4 url parse as summary of links template polyglotAGI
+... not bad for a 6 hour codig session with Professor Codephreak. calling it a day, openai-python terminal session is not working. beautifulsoup4 url parse as summary of links template polyglotAGI terminal integration with openai-python has a couple of upgrade errors.
 
 nothing to see here, move along ;-)
