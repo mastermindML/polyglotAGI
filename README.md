@@ -169,3 +169,6 @@ export OPENAI_API_KEY='your-api-key'
 ... not bad for a 6 hour codig session with Professor Codephreak. calling it a day, openai-python terminal session is not working. beautifulsoup4 url parse as summary of links template polyglotAGI terminal integration with openai-python has a couple of upgrade errors.
 
 nothing to see here, move along ;-)
+https://platform.openai.com/docs/api-reference/chat/create?lang=python
+https://pypi.org/project/openai/
+https://github.com/openai/openai-python
