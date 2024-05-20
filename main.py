@@ -1,8 +1,8 @@
 import os
 import sys
 import threading
-import json
-import openai
+from openai import OpenAI
+from dotenv import load_dotenv
 
 from knowledge_integration import real_time_update
 from language_proficiency import understand_language_syntax
@@ -11,11 +11,10 @@ from adaptation_merging import merge_languages
 from prompt_generation import generate_initial_prompt, refine_prompt
 from complex_solving import solve_complex_problem
 
-# Load API keys
-with open("config/api_keys.json") as f:
-    api_keys = json.load(f)
+# Load environment variables from .env file
+load_dotenv()
 
-openai.api_key = api_keys["openai_api_key"]
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def interactive_terminal():
     print("Interactive OpenAI Terminal. Type 'exit' to quit.")
@@ -24,12 +23,38 @@ def interactive_terminal():
         if user_input.lower() == 'exit':
             break
 
-        response = openai.Completion.create(
-            engine="gpt-3.5-turbo",
-            prompt=user_input,
+        response = client.chat.create(
+            model="gpt-4",
+            messages=[
+                {"role": "user", "content": user_input}
+            ],
             max_tokens=150
         )
-        print("AI:", response.choices[0].text.strip())
+        print("AI:", response.choices[0].message['content'])
+
+def generate_summaries():
+    summaries = {}
+    w3_files = os.listdir("w3")
+
+    for file in w3_files:
+        file_path = os.path.join("w3", file)
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        if not content.strip():
+            continue
+
+        response = client.chat.create(
+            model="gpt-4",
+            messages=[
+                {"role": "user", "content": f"Summarize the following content:\n\n{content[:5000]}"}
+            ],
+            max_tokens=1500
+        )
+        summary = response.choices[0].message['content']
+        summaries[file] = summary
+
+    return summaries
 
 def main():
     # Print Python path for debugging
@@ -72,6 +97,11 @@ def main():
     
     refined_prompt = refine_prompt(initial_prompt)
     print("Refined Prompt:", refined_prompt)
+
+    # Generate and print summaries
+    summaries = generate_summaries()
+    for file, summary in summaries.items():
+        print(f"Summary for {file}:\n{summary}\n")
 
     # Start interactive terminal
     interactive_terminal()
