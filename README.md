@@ -152,6 +152,7 @@ cd polyglotAGI
 python3 -m venv polyglot-agi
 source polyglot-agi/bin/activate  # On Windows, use `polyglot-agi\Scripts\activate
 pip install -r requirements.txt
+python3 setup.py
 python3 main.py
 ```
 
