@@ -137,9 +137,12 @@ File: main.py
     prompt_generation.py: Generates and refines prompts based on the given context.
     main.py: Integrates and runs all the modules, demonstrating the functionality of the entire system.
 
+
 ```bash
 git clone https://github.com/mastermindML/polyglotAGI
 cd polyglotAGI
+python3 -m venv polyglot-agi
+source polyglot-agi/bin/activate  # On Windows, use `polyglot-agi\Scripts\activate
 pip install -r requirements.txt
 python3 main.py
 ```
