@@ -1,11 +1,35 @@
+import os
 import sys
 import threading
+import json
+import openai
+
 from knowledge_integration import real_time_update
 from language_proficiency import understand_language_syntax
 from algorithm_generation import generate_algorithm
 from adaptation_merging import merge_languages
 from prompt_generation import generate_initial_prompt, refine_prompt
-from complex_solving import solve_complex_problem  # Import the new module
+from complex_solving import solve_complex_problem
+
+# Load API keys
+with open("config/api_keys.json") as f:
+    api_keys = json.load(f)
+
+openai.api_key = api_keys["openai_api_key"]
+
+def interactive_terminal():
+    print("Interactive OpenAI Terminal. Type 'exit' to quit.")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == 'exit':
+            break
+
+        response = openai.Completion.create(
+            engine="davinci-codex",
+            prompt=user_input,
+            max_tokens=150
+        )
+        print("AI:", response.choices[0].text.strip())
 
 def main():
     # Print Python path for debugging
@@ -13,18 +37,18 @@ def main():
     
     # Real-Time Knowledge Update
     urls = [
-        'https://example.com/programming', 
-        'https://example.com/frameworks', 
-        'https://example.com/science', 
-        'https://example.com/arts', 
-        'https://example.com/mathematics'
+        'https://github.com/mastermindml/mastermind', 
+        'https://github.com/pythaiml/automindx', 
+        'https://github.com/Professor-Codephreak', 
+        'https://github.com/augml/lwe-plugin-shell', 
+        'https://github.com/augml/nicegui'
     ]
     interval = 3600  # Update every hour
     knowledge_update_thread = threading.Thread(target=real_time_update, args=(interval, urls))
     knowledge_update_thread.start()
     
     # Language Proficiency Example
-    code_snippet = "print('Hello, World!')"
+    code_snippet = "print('Professor Codephreak sends his regards')"
     language = "Python"
     syntax_explanation = understand_language_syntax(code_snippet, language)
     print("Syntax Explanation:", syntax_explanation)
@@ -49,5 +73,13 @@ def main():
     refined_prompt = refine_prompt(initial_prompt)
     print("Refined Prompt:", refined_prompt)
 
+    # Start interactive terminal
+    interactive_terminal()
+
 if __name__ == "__main__":
+    # Create necessary directories
+    os.makedirs("memory", exist_ok=True)
+    os.makedirs("context", exist_ok=True)
+    os.makedirs("w3", exist_ok=True)
+    
     main()
