@@ -164,3 +164,7 @@ pip install openai[wandb]
 ```
 alternative openai key addition
 export OPENAI_API_KEY='your-api-key'
+
+... not bad for a 6 hour codig session with Professor Codephreak. calling it a day, openai-python terminal session is not working. beautifulsoup4 url parse as summary of links template polyglotAGI
+
+nothing to see here, move along ;-)
