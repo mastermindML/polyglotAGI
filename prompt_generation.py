@@ -28,7 +28,7 @@ def refine_prompt(initial_prompt):
         str: Refined prompt.
     """
     response = openai.Completion.create(
-      engine="davinci-codex",
+      engine="gpt-4o",
       prompt=f"Refine the following prompt to be more specific:\\n{initial_prompt}",
       max_tokens=150
     )
