@@ -162,6 +162,7 @@ pip install --upgrade openai
 pip install openai[embeddings]
 pip install openai[wandb]
 ```
+add your api key to .env
 alternative openai key addition
 export OPENAI_API_KEY='your-api-key'
 
