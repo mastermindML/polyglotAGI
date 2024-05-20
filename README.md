@@ -24,7 +24,7 @@ polyglotAGI/
 
 
 ## Overview
-The PolyglotAI-AGI-DPTfFusion project integrates real-time knowledge updates, language proficiency, efficient algorithm generation, dynamic adaptation and merging, adaptive reasoning, and recursive prompt generation. This project ensures continuous learning, adaptation, and improvement across various domains, leveraging advanced reasoning and dynamic prompt generation for comprehensive and innovative solutions.
+The PolyglotAGI project integrates real-time knowledge updates, language proficiency, efficient algorithm generation, dynamic adaptation and merging, adaptive reasoning, and recursive prompt generation. This project ensures continuous learning, adaptation, and improvement across various domains, leveraging advanced reasoning and dynamic prompt generation for comprehensive and innovative solutions.
 
 ## Modules
 
