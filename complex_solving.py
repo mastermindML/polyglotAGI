@@ -13,18 +13,18 @@ def main():
     
     # Real-Time Knowledge Update
     urls = [
-        'https://example.com/programming', 
-        'https://example.com/frameworks', 
-        'https://example.com/science', 
-        'https://example.com/arts', 
-        'https://example.com/mathematics'
+        'https://github.com/mastermindML/mastermind', 
+        'https://github.com/pythaiml/automindx', 
+        'https://github.com/augml/nicegui', 
+        'https://github.com/augml/lwe-plugin-shell', 
+        'https://github.com/augml/ollama-python'
     ]
     interval = 3600  # Update every hour
     knowledge_update_thread = threading.Thread(target=real_time_update, args=(interval, urls))
     knowledge_update_thread.start()
     
     # Language Proficiency Example
-    code_snippet = "print('Hello, World!')"
+    code_snippet = "print('codephreak is ...')"
     language = "Python"
     syntax_explanation = understand_language_syntax(code_snippet, language)
     print("Syntax Explanation:", syntax_explanation)
