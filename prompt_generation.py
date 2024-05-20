@@ -11,9 +11,9 @@ def generate_initial_prompt(problem_context):
         str: Generated initial prompt.
     """
     response = openai.Completion.create(
-      engine="davinci-codex",
+      engine="gpt-4o",
       prompt=f"Generate an initial prompt for the following context:\\n{problem_context}",
-      max_tokens=150
+      max_tokens=1500
     )
     return response.choices[0].text.strip()
 
