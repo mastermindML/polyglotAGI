@@ -156,3 +156,11 @@ python3 setup.py
 python3 main.py
 ```
 
+tips for openai-python
+```bash
+pip install --upgrade openai
+pip install openai[embeddings]
+pip install openai[wandb]
+```
+alternative openai key addition
+export OPENAI_API_KEY='your-api-key'
