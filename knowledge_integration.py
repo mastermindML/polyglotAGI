@@ -53,12 +53,12 @@ def scrape_and_summarize(url):
         logging.info(f"Found {len(internal_links)} internal links on {url}")
 
         # Use GPT-4 to summarize the content
-        response = client.chat.create(
-            model="gpt-4",
+        response = client.chat_completions.create(
+            model="gpt-4o",
             messages=[
                 {"role": "user", "content": f"Summarize the following content:\n\n{text[:5000]}"}
             ],
-            max_tokens=150
+            max_tokens=1500
         )
 
         # Handle the response correctly

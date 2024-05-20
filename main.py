@@ -23,8 +23,8 @@ def interactive_terminal():
         if user_input.lower() == 'exit':
             break
 
-        response = client.chat.create(
-            model="gpt-4",
+        response = client.chat_completions.create(
+            model="gpt-4o",
             messages=[
                 {"role": "user", "content": user_input}
             ],
@@ -44,8 +44,8 @@ def generate_summaries():
         if not content.strip():
             continue
 
-        response = client.chat.create(
-            model="gpt-4",
+        response = client.chat_completions.create(
+            model="gpt-4o",
             messages=[
                 {"role": "user", "content": f"Summarize the following content:\n\n{content[:5000]}"}
             ],
