@@ -5,13 +5,21 @@ using polyglotAI with Profesor Codephreak enhanced by aGLM, <a href="https://git
 
 ```csharp
 polyglotAGI/
+├── adaptation_merging.py
+├── algorithm_generation.py
+├── complex_solving.py
+├── config/
+│   └── api_keys.json
+├── context/
 ├── knowledge_integration.py
 ├── language_proficiency.py
-├── algorithm_generation.py
-├── adaptation_merging.py
+├── main.py
+├── memory/
 ├── prompt_generation.py
-├── complex_solving.py
-└── main.py
+├── requirements.txt
+├── setup.py
+└── w3/
+
 ```
 
 
